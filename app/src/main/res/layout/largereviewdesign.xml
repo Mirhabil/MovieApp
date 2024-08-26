@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1D36">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewPpL"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView46UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="24framesofnick"
+        android:textColor="#80FFFEFE"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPpL"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPpL"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPpL" />
+
+    <TextView
+        android:id="@+id/textView48MovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Free Guy"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPpL"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPpL" />
+
+    <TextView
+        android:id="@+id/textView49MovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="2021"
+        android:textColor="#80F4F1F1"
+        app:layout_constraintBottom_toBottomOf="@+id/textView48MovieName"
+        app:layout_constraintStart_toEndOf="@+id/textView48MovieName"
+        app:layout_constraintTop_toTopOf="@+id/textView48MovieName" />
+
+    <TextView
+        android:id="@+id/textView50MovieDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="When Guy, a bank teller, learns that he is a non-player character in a bloodthirsty, open-world video game, he goes on to become the hero of the story and takes the responsibility of saving the world."
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="28dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView46UserName"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPpL"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RatingBar
+        android:id="@+id/ratingBar7"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:progressTint="#E80808"
+        app:layout_constraintStart_toStartOf="@+id/textView48MovieName"
+        app:layout_constraintTop_toBottomOf="@+id/textView48MovieName" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#808080"
+        android:text="Film >"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/ratingBar7"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar7" />
+</androidx.constraintlayout.widget.ConstraintLayout>

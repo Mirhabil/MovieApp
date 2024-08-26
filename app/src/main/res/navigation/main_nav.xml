@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homePageFragment">
+    <fragment
+        tools:layout="@layout/fragment_homepage"
+        android:id="@+id/homePageFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.HomePageFragment.HomePageFragment"
+        android:label="HomePageFragment" >
+        <action
+            android:id="@+id/action_homePageFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_self"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_watchListFragment"
+            app:destination="@id/watchListFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_explorePageFragment"
+            app:destination="@id/explorePageFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_largeReviewBottomSheetFragment"
+            app:destination="@id/largeReviewBottomSheetFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_largeReviewFragment"
+            app:destination="@id/largeReviewFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_profile"
+        android:id="@+id/profileFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.ProfileFragment.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviePageFragment"
+        tools:layout="@layout/fragment_moviepage"
+        android:name="com.example.letterboxd.presentation.Fragments.MoviePageFragment.MoviePageFragment"
+        android:label="MoviePageFragment" >
+        <action
+            android:id="@+id/action_moviePageFragment_to_reviewPageFragment"
+            app:destination="@id/reviewPageFragment" />
+        <argument
+            android:name="MovieId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_watchListFragment"
+            app:destination="@id/watchListFragment" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_castsBottomSheetFragment"
+            app:destination="@id/castsBottomSheetFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_reviewpage"
+        android:id="@+id/reviewPageFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.ReviewPageFragment.ReviewPageFragment"
+        android:label="ReviewPageFragment" >
+        <argument
+            android:name="PopularFilmsThisMonthModelParcalableData"
+            app:argType="com.example.letterboxd.domain.model.PopularFilmsThisMonthModel" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <argument
+            android:name="GroupListsTHisMonthParcalableData"
+            app:argType="com.example.letterboxd.domain.model.GroupPopularListsThisMonthModel" />
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/explorePageFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.ExplorePageFragment.ExplorePageFragment"
+        android:label="fragment_explore_page"
+        tools:layout="@layout/fragment_explore_page" >
+        <action
+            android:id="@+id/action_explorePageFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_explorePageFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_watchlist"
+        android:id="@+id/watchListFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.WatchListFragment.WatchListFragment"
+        android:label="WatchListFragment" >
+        <action
+            android:id="@+id/action_watchListFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_search"
+        android:id="@+id/searchFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.SearchFragment.SearchFragment"
+        android:label="SearchFragment" />
+    <dialog
+        android:id="@+id/castsBottomSheetFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.CastsBottomSheetFragment.CastsBottomSheetFragment"
+        android:label="fragment_casts_bottom_sheet"
+        tools:layout="@layout/fragment_casts_bottom_sheet" >
+        <argument
+            android:name="personId"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        tools:layout="@layout/homepagedrawerdesign"
+        android:id="@+id/drawerFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.DrawerFragment"
+        android:label="DrawerFragment" >
+        <action
+            android:id="@+id/action_drawerFragment_to_watchListFragment"
+            app:destination="@id/watchListFragment" />
+    </fragment>
+    <dialog
+        tools:layout="@layout/largereviewdesign"
+        android:id="@+id/largeReviewBottomSheetFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.LargeReviewBottomSheetFragment"
+        android:label="LargeReviewBottomSheetFragment" >
+        <argument
+            android:name="largereviewParcelableData"
+            app:argType="com.example.letterboxd.domain.model.RecentFriendsReviewModel" />
+    </dialog>
+    <fragment
+        tools:layout="@layout/largereviewdesign"
+        android:id="@+id/largeReviewFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.LargeReviewFragment"
+        android:label="LargeReviewFragment" >
+        <argument
+            android:name="largeReviewParcelableData"
+            app:argType="com.example.letterboxd.domain.model.RecentFriendsReviewModel" />
+        <action
+            android:id="@+id/action_largeReviewFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGroupedFragment"
+        android:name="com.example.letterboxd.presentation.Fragments.NewGroupedFragment"
+        android:label="fragment_new_grouped"
+        tools:layout="@layout/fragment_new_grouped" />
+</navigation>

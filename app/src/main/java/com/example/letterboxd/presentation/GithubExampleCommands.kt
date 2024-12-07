@@ -14,4 +14,5 @@ fun main(){
 fun gezmeyeGedeceyik(){
 
     println("ushvijdsfl")
+    println("dlknv")
 }

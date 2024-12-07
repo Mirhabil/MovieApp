@@ -5,7 +5,13 @@ fun main(){
     println("fdjdkf")
     for(i in 1..10){
         println(i)
+        println("Salam")
     }
 
     println("ljdjkfv")
+}
+
+fun gezmeyeGedeceyik(){
+
+    println("ushvk")
 }

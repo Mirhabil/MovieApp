@@ -52,6 +52,7 @@ class HiltModule{
     }
 
 
+
     @Singleton
     @Provides
     fun getWatchListDatabase(context:Context): WatchlistDatabase {
@@ -113,6 +114,7 @@ class HiltModule{
 
         return PopularMoviesRepoImpl(apiPopularMovies)
     }
+
 
 
 }

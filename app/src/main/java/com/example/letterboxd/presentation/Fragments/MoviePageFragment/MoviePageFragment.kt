@@ -98,6 +98,8 @@ class MoviePageFragment :Fragment() {
                 binding.buttonAddToWatchlist.setBackgroundColor(Color.GREEN)
                 binding.buttonAddToWatchlist.text="Aded Movie"
                 binding.buttonAddToWatchlist.setTextColor(Color.BLACK)
+
+
             }
 
 

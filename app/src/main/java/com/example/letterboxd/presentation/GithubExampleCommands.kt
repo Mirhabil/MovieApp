@@ -1,5 +1,5 @@
 package com.example.letterboxd.presentation
 
 fun main(){
-    println("Message")
+    println("Message 2")
 }

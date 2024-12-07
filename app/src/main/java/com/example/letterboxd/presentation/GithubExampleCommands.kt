@@ -13,5 +13,9 @@ fun main(){
 
 fun gezmeyeGedeceyik(){
 
-    println("ushvijdsfl")
+    println("ushvk")
+}
+
+fun mirhabilinki() {
+    println("meyxana deyensen yoxsa reper")
 }

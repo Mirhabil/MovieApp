@@ -18,4 +18,6 @@ fun gezmeyeGedeceyik(){
 
 fun mirhabilinki() {
     println("meyxana deyensen yoxsa reper")
+    println("lsjnvkdv")
+
 }

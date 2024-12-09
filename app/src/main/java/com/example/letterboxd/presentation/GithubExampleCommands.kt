@@ -14,6 +14,13 @@ fun main(){
 fun gezmeyeGedeceyik(){
 
     println("ushvk")
+    println("djnfjlndvkjd")
+}
+fun newFunction(){
+    for (i in 1..10){
+        println(i)
+    }
+
 }
 
 fun mirhabilinki() {
